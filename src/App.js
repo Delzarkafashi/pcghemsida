@@ -10,30 +10,25 @@ import { Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    <> 
-    <div className="page-container">
+    <>
+      <div className="page-container">
+        <div className="content-wrap">
+          <Navbar />
+          <div className="container">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/product" element={<Product />} />
+              <Route path="/coaching" element={<Coaching />} />
+              <Route path="/customerservice" element={<CustomerService />} />
+            </Routes>
+          </div>
+          <Main />
 
-    <div className="content-wrap">
-
-    
-    <Navbar />
-    <div className="container">
-    <Routes>
-    <Route path="/" element={<Home />} />
-    <Route path="/product" element={<Product />} />
-    <Route path="/coaching" element={<Coaching />} />
-    <Route path="/customerservice" element={<CustomerService />} />
-    </Routes>
-    
-    </div>
-    <Main />
-
-    <Footer />
-
-    </div>
-    </div>
+          <Footer />
+        </div>
+      </div>
     </>
-  ) 
+  ); 
   
 }
 
