@@ -1,5 +1,7 @@
 import React from "react";
 import "./Footer.css";
+import SM from './SM/SM.js';
+
 
 const Footer = () => {
   return (
@@ -12,29 +14,29 @@ const Footer = () => {
             <ul className="list-unstyled">
               <li>Address</li>
               <li>Storgatan 3 , linköping</li>
-              <br/>
               <li>123 33, Sweden</li>
-              <li>info@pcg.se</li>
-              <br/>
-              <li>tel </li>
-              <li>070-44444444</li>
+              <li><a href="mailto:Delzarkafashi@gmail.com">PSC@gmail.com</a></li>
+              <li>Telefon:</li>
+              <li><a href="tel:0709224098"> 0709224098</a></li>
             </ul>
           </div>
           {/* colomn2 */}
           <div className="col">
-            <h1>Follow Us</h1>
+          <SM />
+            {/* <h1>Follow Us</h1>
             <ul className="list-unstyled">
               <li>facebook</li>
               <li>instagram</li>
               <li>twitter</li>
-              <li>youtube</li>
+              <li>youtube</li> */}
               {/* <li>andress</li>
               <li>Storgatan 3 , linköping</li>
               <li>123 33, sweden</li>
               <li>info@pcg.se</li>
               <li>telfon </li>
               <li>070-44444444</li> */}
-            </ul>
+              
+            {/* </ul> */}
           </div>
           {/* colomn3 */}
           <div className="col">
