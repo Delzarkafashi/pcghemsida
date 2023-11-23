@@ -6,7 +6,7 @@ import LogAndSing from './LogAndSing';
 export default function Navbar() {
   return (
     <nav className="nav">
-      <h1 className="name">Performance Coach&Gear</h1>
+      <h1 className="name" id="back-to-top-anchor">Performance Coach&Gear</h1>
       <div className="user-actions">
          <LogAndSing />
         {/* <Link to="/login">Logga in</Link>
