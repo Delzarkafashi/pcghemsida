@@ -42,7 +42,7 @@ const App = () => {
   };
 
   return (
-    <div>
+    <div className=''>
       {loggedIn ? (
         <div>
           <p>Välkommen, {username}!</p>
