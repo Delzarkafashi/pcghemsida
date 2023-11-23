@@ -1,0 +1,40 @@
+form {
+    display: flex;
+    justify-content: center;
+}
+
+fieldset {
+    background-color: rgba(9, 52, 112, 0.4);
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px rgba(207, 128, 16, 0.4);
+    border: none;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    font-size: xx-large;
+    font-weight: bold;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    
+}
+
+legend {
+    background-color: rgb(105, 105, 11);
+    border-radius: 10px;
+    color:aliceblue;
+    outline: 2px solid black;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 40rem;
+}
+
+.form-control {
+    width: 100%;
+}
+
+.sub-buton {
+    width: 200px;
+}
