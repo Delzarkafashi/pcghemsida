@@ -1,15 +1,17 @@
 import { Link, resolvePath, useMatch, useResolvedPath } from "react-router-dom"
 import SearchBar from './SearchBar';
 import "./header.css"
+import LogAndSing from './LogAndSing';
 
 export default function Navbar() {
   return (
     <nav className="nav">
       <h1 className="name">Performance Coach&Gear</h1>
       <div className="user-actions">
-        <Link to="/login">Logga in</Link>
+         <LogAndSing />
+        {/* <Link to="/login">Logga in</Link>
         <Link to="/signup">Registrera</Link>
-        <Link to="/cart">Korg</Link>
+        <Link to="/cart">Korg</Link> */}
       </div>
       <div className="SN">
         <div className="searchBar">

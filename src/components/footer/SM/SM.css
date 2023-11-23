@@ -6,6 +6,7 @@
     padding: 20px;
     text-align: center;
     position: static;
+    
 }
 
 /*----------- BAR SOCIAL -----------*/
@@ -18,25 +19,26 @@
 .container-sm a {
     display: flex;
     justify-content: center;
-    width: 30px;
-    height: 30px;
-    background-color: #fff;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
-    box-shadow: 0 4px 4px rgb(0, 0, 0, .3);
+    box-shadow: 0 4px 4px rgb(0, 0, 0, .3); /* Här är skuggan */
     transform: translateY(0) scale(1);
-    opacity: 0.5;
+    opacity: 1;
     transition: all 1s cubic-bezier(.215, .61, .355, 1);
     margin: 0 4px;
 }
 
-.container-sm a i {
+
+
+ .container-sm a i {
     color: #000;
     font-size: 15px;
     line-height: 30px;
 }
 
 /*inlinkd*/
-.container-sm a:nth-child(1):hover {
+ .container-sm a:nth-child(1):hover {
     opacity: 1;
     background: #1877F2;
     transform: translateY(-6px) scale(1.2);
@@ -51,7 +53,7 @@
 
 /*instgram*/
 .container-sm a:nth-child(3):hover {
-    opacity: 1; 
+    opacity: 1;
     background: rgb(255,0,172);
     background: linear-gradient(222deg, rgba(255,0,172,1) 0%, rgba(252,176,69,1) 100%);
     transform: translateY(-6px) scale(1.2);
@@ -60,5 +62,5 @@
 /*för telefonnummern*/
 a {
     color: rgb(0, 136, 255);
-    font-size: 18px; 
+    font-size: 18px;
 }
