@@ -7,6 +7,7 @@ import Product from "./pages/Product";
 import Footer from "./components/footer/Footer";
 import "./App.css"
 import { Route, Routes } from "react-router-dom";
+import Korg from "./components/header/Korg";
 
 function App() {
   return (
@@ -20,6 +21,8 @@ function App() {
               <Route path="/product" element={<Product />} />
               <Route path="/coaching" element={<Coaching />} />
               <Route path="/customerservice" element={<CustomerService />} />
+              <Route path="/korg" element={<Korg />} />
+              
             </Routes>
           </div>
           <Main />

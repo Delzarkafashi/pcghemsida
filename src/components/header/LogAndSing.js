@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Korg from './Korg';
+import { useNavigate } from 'react-router'; //olle
 
 const App = () => {
   const [username, setUsername] = useState('');
@@ -9,6 +10,7 @@ const App = () => {
   const [usernameError, setUsernameError] = useState(false);
   const [passwordError, setPasswordError] = useState(false);
   const [showBasket, setShowBasket] = useState(false);
+  const navigate = useNavigate();  //olle
 
   const handleRegister = () => {
     if (!username || !password) {
@@ -65,15 +67,32 @@ const App = () => {
     setPassword('');
     setShowBasket(false);
   };
+    //  setShowBasket(!showBasket);
+    //  window.location.href = 'http://localhost:3000/korg'; 
 
-  const handleBasket = () => {
+   const handleBasket = () => {
     if (loggedIn) {
-      // Uppdatering: Skapa en länk till den nya sidan här
-      window.location.href = 'http://localhost:3000/customerservice'; // Ändra detta till den faktiska URL:en för din nya sida
-    } else {
-      alert('Du måste vara inloggad för att se innehållet i korgen.');
-    }
-  };
+    //   return;
+    //   <Korg />
+      
+   
+      navigate("/korg");   //olle
+      
+     } else {
+       alert('Du måste vara inloggad för att se innehållet i korgen.');
+     }
+   };
+
+  // const handleBasket = () => {
+  //   if (loggedIn) {
+  //     return <Korg />;
+  //   } else {
+  //     alert('Du måste vara inloggad för att se innehållet i korgen.');
+  //     // Om du vill returnera något annat när användaren inte är inloggad kan du göra det här
+  //     // Exempel: return <p>Du måste vara inloggad för att se innehållet i korgen.</p>;
+  //   }
+  // };
+  
 
   return (
     <div>
@@ -151,7 +170,7 @@ const App = () => {
         </div>
       )}
 
-      {showBasket && <Korg />}
+      {showBasket && <Korg />}                  
     </div>
   );
 };
