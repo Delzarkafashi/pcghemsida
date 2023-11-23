@@ -1,0 +1,82 @@
+// import logo from './logo.svg';
+// import './App.css';
+ 
+// function ProgramRow( {program} ){
+ 
+//   const title = 
+//   program.ageRestrited ? <span style={{color: 'red'}}>
+//     {program.title}
+//     </span> : program.title;
+ 
+//   return (
+//   <tr>
+//       <td>{title}</td>
+//       <td>{program.description}</td>
+//   </tr>);
+//   }
+// function ProgramGenreRow( {genre} ){
+//   return(
+//   <tr>
+//     <th>{genre}</th>
+//   </tr>
+//   );
+// }
+// function ProgramTable( {programs} ){
+//   const rows = [];
+//   programs.forEach((program) => {
+//     rows.push(
+//       <ProgramGenreRow 
+//         genre = {program.genre}
+//         key = {program.genre}/>
+//     )
+//     rows.push(
+//       <ProgramRow 
+//        program = {program}
+//        key = {program.title} />
+//     )
+//   });
+//   return (
+//     <table>
+//       <thead>
+//         <tr>
+//           <th>Titel</th>
+//           <th>Beskrivning</th>
+//         </tr>
+//       </thead>
+//       <tbody>
+//         {rows}
+//       </tbody>
+//     </table>
+//   );
+// };
+// function SearchBar(){
+//   return (
+//     <form>
+//       <input type="text" placeholder="sök..."></input>
+//       <label>
+//         <input type="checkbox"></input>
+//         Visa barnförbjudet
+//       </label>
+//     </form>
+//   );
+// };
+// function FilteredProgramTable( {programs} ){
+//   return (
+//     <div>
+//       <SearchBar></SearchBar>
+//       <ProgramTable programs = {programs}></ProgramTable>
+//     </div>
+//   )
+// };
+ 
+// const PROGRAMS = [
+//   { title: "nyhetsmorgon", description: "nyheter på morgonen i en soffa typ", ageRestrited: false, genre: "news"},
+//   { title: "robinsson", description: "desperata människor på en ö", ageRestrited: true, genre: "reality"},
+//   { title: "pokemon", description: "i wanna be the berry vest", ageRestrited: false, genre: "kids"},
+//   ]
+ 
+// function App() {
+//   return <FilteredProgramTable  programs = {PROGRAMS}/>;
+// }
+ 
+// export default App;

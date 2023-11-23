@@ -25,6 +25,7 @@ export default function Navbar() {
           <CustomLink to="/product">Product</CustomLink>
           <CustomLink to="/coaching">Coaching</CustomLink>
           <CustomLink to="/customerservice">Customer service</CustomLink>
+           {/* { <CustomLink to="/korg">korg</CustomLink> }  */}
         </ul>
       </div>
     </nav>
