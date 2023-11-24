@@ -79,29 +79,14 @@ const App = () => {
     setPassword("");
     setShowBasket(false);
   };
-  //  setShowBasket(!showBasket);
-  //  window.location.href = 'http://localhost:3000/korg';
 
   const handleBasket = () => {
     if (loggedIn) {
-      //   return;
-      //   <Korg />
-
       navigate("/korg"); //olle
     } else {
       alert("Du måste vara inloggad för att se innehållet i korgen.");
     }
   };
-
-  // const handleBasket = () => {
-  //   if (loggedIn) {
-  //     return <Korg />;
-  //   } else {
-  //     alert('Du måste vara inloggad för att se innehållet i korgen.');
-  //     // Om du vill returnera något annat när användaren inte är inloggad kan du göra det här
-  //     // Exempel: return <p>Du måste vara inloggad för att se innehållet i korgen.</p>;
-  //   }
-  // };
 
   function HandleXBtn (showForm){
     if (!showForm === "register" || 
@@ -117,16 +102,12 @@ const App = () => {
           <CloseIcon/>
         </button>
       );
-
   }
-
-
-
-
 
   return (
     <div className="user-settings">
       {loggedIn ? (
+ 
         <div className="valkommen">
           <p>Välkommen, {loggedInUser}!</p>
           <div className="valkommen-btn">
@@ -144,6 +125,7 @@ const App = () => {
             >
               <ShoppingCartIcon />
             </button>
+
           </div>
         </div>
       ) : (
