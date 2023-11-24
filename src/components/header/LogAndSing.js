@@ -10,6 +10,7 @@ const App = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [loggedIn, setLoggedIn] = useState(false);
+  const [loggedInUser, setLoggedInUser] = useState("");
   const [showForm, setShowForm] = useState(null);
   const [usernameError, setUsernameError] = useState(false);
   const [passwordError, setPasswordError] = useState(false);
@@ -53,11 +54,12 @@ const App = () => {
     }
 
     const existingUsers = JSON.parse(localStorage.getItem("users")) || [];
-    const userExists = existingUsers.some(
+    const user = existingUsers.find(
       (user) => user.username === username && user.password === password
     );
 
-    if (userExists) {
+    if (user) {
+      setLoggedInUser(user.username);
       setLoggedIn(true);
       alert("Inloggning lyckades!");
     } else {
@@ -69,35 +71,21 @@ const App = () => {
   };
 
   const handleLogout = () => {
+    setLoggedInUser("");
     setLoggedIn(false);
     setShowForm(null);
     setUsername("");
     setPassword("");
     setShowBasket(false);
   };
-  //  setShowBasket(!showBasket);
-  //  window.location.href = 'http://localhost:3000/korg';
 
   const handleBasket = () => {
     if (loggedIn) {
-      //   return;
-      //   <Korg />
-
       navigate("/korg"); //olle
     } else {
       alert("Du måste vara inloggad för att se innehållet i korgen.");
     }
   };
-
-  // const handleBasket = () => {
-  //   if (loggedIn) {
-  //     return <Korg />;
-  //   } else {
-  //     alert('Du måste vara inloggad för att se innehållet i korgen.');
-  //     // Om du vill returnera något annat när användaren inte är inloggad kan du göra det här
-  //     // Exempel: return <p>Du måste vara inloggad för att se innehållet i korgen.</p>;
-  //   }
-  // };
 
   function HandleXBtn (showForm){
     if (!showForm === "register" || 
@@ -112,18 +100,13 @@ const App = () => {
           <CloseIcon/>
         </button>
       );
-
   }
-
-
-
-
 
   return (
     <div className="user-settings">
       {loggedIn ? (
         <div>
-          <p>Välkommen, {username}!</p>
+          <p>Välkommen, {loggedInUser}!</p>
           <div>
             <button onClick={handleLogout}>Logga ut</button>
             <button onClick={handleBasket}>Korg</button>
