@@ -1,7 +1,7 @@
 import React from 'react';
 import './Coaching.css';
 import { Link } from "react-router-dom"
-import bjj from "./PI/Bjj.jpg"
+import bjj from "./PI/bjj.jpg"
 import cykling from "./PI/cykling.jpg"
 import fotboll from "./PI/fotboll.jpg"
 

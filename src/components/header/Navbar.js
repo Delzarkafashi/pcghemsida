@@ -1,4 +1,4 @@
-import { Link, resolvePath, useMatch, useResolvedPath } from "react-router-dom"
+import { Link, useMatch, useResolvedPath } from "react-router-dom"
 import SearchBar from './SearchBar';
 import "./header.css"
 import LogAndSing from './LogAndSing';

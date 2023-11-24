@@ -1,47 +1,96 @@
-/* .App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  font-family: "Varela Round";
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.dFlex, .btn, .main_content .card .card_header, .main_content .card, .main_content {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.main_content {
+  position: relative;
+  width: 70%;
+  height: 100%;
+  margin: 50px auto;
+  padding: 50px 0 0;
+  box-sizing: border-box;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
-
-.page-container{
-  display: flex;
+.main_content h3 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #2d343e;
+  font-size: 10.5vw;
+}
+.main_content .card {
+  width: 30%;
+  border-radius: 15px;
   flex-direction: column;
-  min-height: 100vh;
+  position: relative;
+  transform: scale(0.8);
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 50px;
 }
-content-wrap{
-  flex: 1;
+.main_content .card .card_img {
+  margin-top: -5vw;
 }
+.main_content .card .card_img img {
+  width: 200px;
+}
+.main_content .card .card_header {
+  flex-direction: column;
+  color: #fff;
+  margin: 25px 0;
+}
+.main_content .card .card_header h2 {
+  font-size: 18px;
+}
+.main_content .card .card_header p {
+  font-size: 14px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.3);
+  margin: 8px 0;
+}
+.main_content .card .card_header .price {
+  font-size: 25px;
+  color: #fe8033;
+}
+.main_content .card .card_header .price span {
+  font-size: 15px;
+  display: inline-block;
+  vertical-align: top;
+}
+.main_content .card:hover {
+  background-color: #2b3039;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.main_content .card:hover .btn {
+  background-color: #fe8033;
+  color: #fff;
+}
+
+.btn {
+  width: 130px;
+  height: 35px;
+  font-size: 14px;
+  border-radius: 35px;
+  background-color: #2d343e;
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  position: relative;
+  transition: backgroud-color 0.3s ease;
+  overflow: hidden;
+}/*# sourceMappingURL=App.css.map */

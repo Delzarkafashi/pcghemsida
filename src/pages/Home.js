@@ -1,7 +1,6 @@
 import "./Home.css"
 import bike from "./PI/bicycle.jpg"
 import coach from "./PI/Coaching.jpg"
-import bjj from "./PI/bjj-gi.jpg"
 import customer from "./PI/customer-service.jpg"
 import { Link } from "react-router-dom"
 
