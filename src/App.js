@@ -22,7 +22,6 @@ function App() {
               <Route path="/coaching" element={<Coaching />} />
               <Route path="/customerservice" element={<CustomerService />} />
               <Route path="/korg" element={<Korg />} />
-              
             </Routes>
           </div>
           <Main />

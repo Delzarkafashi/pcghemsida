@@ -5,6 +5,7 @@ import bjj from './PI/bjj.jpg';
 import cykling from './PI/cykling.jpg';
 import fotboll from './PI/fotboll.jpg';
 import Booking from '../components/Booking';
+import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 
 export default function Coaching() {
   const { speak, speaking, cancel } = useSpeechSynthesis();
@@ -53,18 +54,18 @@ export default function Coaching() {
       cancel();
     }
   };
-
   return (
     <div className='wrapper'>
       <div className='coaching-bjj'>
         <p className='coaching-par'>
+        <button className='speech-btn' onClick={() => handleClick(textToReadBJJ)}>
+          <PlayArrowIcon fontSize='small' />
+          {speaking ? 'Stoppa uppläsning' : 'Starta uppläsning'}
+        </button>
           <h3>{headerTextBJJ}</h3>
           <p>{paragraphTextBJJ}</p>
           <Booking />
         </p>
-        <button onClick={() => handleClick(textToReadBJJ)}>
-          {speaking ? 'Stoppa uppläsning' : 'Starta uppläsning'}
-        </button>
         <a href='https://calendly.com/delzarkafashi/how-can-we-help-you' target='_blank' title='två man som tävlar i BJJ' rel='noopener noreferrer'>
           <img src={bjj} alt='Brazilian Jiu-Jitsu' width={450} height={320} />
         </a>
@@ -72,13 +73,14 @@ export default function Coaching() {
 
       <div className='coaching-cykling'>
         <p className='coaching-par'>
+        <button className='speech-btn' onClick={() => handleClick(textToReadCykling)}>
+        <PlayArrowIcon fontSize='small' />
+          {speaking ? 'Stoppa uppläsning' : 'Starta uppläsning'}
+        </button>
           <h3>{headerTextCykling}</h3>
           <p>{paragraphTextCykling}</p>
           <Booking />
         </p>
-        <button onClick={() => handleClick(textToReadCykling)}>
-          {speaking ? 'Stoppa uppläsning' : 'Starta uppläsning'}
-        </button>
         <a href='https://calendly.com/delzarkafashi/how-can-we-help-you' target='_blank'  title='en kvinna som cyklar' rel='noopener noreferrer'>
           <img src={cykling} alt='Cykling' width={450} />
         </a>
@@ -86,13 +88,14 @@ export default function Coaching() {
 
       <div className='coaching-fotboll'>
         <p className='coaching-par'>
+        <button className='speech-btn' onClick={() => handleClick(textToReadFotboll)}>
+        <PlayArrowIcon fontSize='small' />
+          {speaking ? 'Stoppa uppläsning' : 'Starta uppläsning'}
+        </button>
           <h3>{headerTextFotboll}</h3>
           <p>{paragraphTextFotboll}</p>
           <Booking />
         </p>
-        <button onClick={() => handleClick(textToReadFotboll)}>
-          {speaking ? 'Stoppa uppläsning' : 'Starta uppläsning'}
-        </button>
         <a href='https://calendly.com/delzarkafashi/how-can-we-help-you' target='_blank'  title='en bild på en fotboll' rel='noopener noreferrer'>
           <img src={fotboll} alt='fotboll' width={450} />
         </a>

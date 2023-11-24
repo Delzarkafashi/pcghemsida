@@ -5,11 +5,13 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import PersonAddIcon from '@mui/icons-material/PersonAdd';
 import VpnKeyIcon from '@mui/icons-material/VpnKey';
 import CloseIcon from '@mui/icons-material/Close';
+import LogoutIcon from '@mui/icons-material/Logout';
 
 const App = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [loggedIn, setLoggedIn] = useState(false);
+  const [loggedInUser, setLoggedInUser] = useState("");
   const [showForm, setShowForm] = useState(null);
   const [usernameError, setUsernameError] = useState(false);
   const [passwordError, setPasswordError] = useState(false);
@@ -53,11 +55,12 @@ const App = () => {
     }
 
     const existingUsers = JSON.parse(localStorage.getItem("users")) || [];
-    const userExists = existingUsers.some(
+    const user = existingUsers.find(
       (user) => user.username === username && user.password === password
     );
 
-    if (userExists) {
+    if (user) {
+      setLoggedInUser(user.username);
       setLoggedIn(true);
       alert("Inloggning lyckades!");
     } else {
@@ -69,6 +72,7 @@ const App = () => {
   };
 
   const handleLogout = () => {
+    setLoggedInUser("");
     setLoggedIn(false);
     setShowForm(null);
     setUsername("");
@@ -107,6 +111,7 @@ const App = () => {
       return (
         <button
           className="x-btn"
+          title="Stäng"
           onClick={showForm ? () => setShowForm(false) : null}
         >
           <CloseIcon/>
@@ -122,11 +127,23 @@ const App = () => {
   return (
     <div className="user-settings">
       {loggedIn ? (
-        <div>
-          <p>Välkommen, {username}!</p>
-          <div>
-            <button onClick={handleLogout}>Logga ut</button>
-            <button onClick={handleBasket}>Korg</button>
+        <div className="valkommen">
+          <p>Välkommen, {loggedInUser}!</p>
+          <div className="valkommen-btn">
+            <button
+              className="select-btn"
+              onClick={handleLogout}
+              title="Logga ut"
+            >
+              <LogoutIcon />
+            </button>
+            <button 
+              className="select-btn" 
+              onClick={handleBasket} 
+              title="Cart"
+            >
+              <ShoppingCartIcon />
+            </button>
           </div>
         </div>
       ) : (
@@ -139,6 +156,7 @@ const App = () => {
                 <input
                   type="text"
                   placeholder="Användarnamn"
+                  title="Välj ett användarnamn"
                   value={username}
                   onChange={(e) => {
                     setUsername(e.target.value);
@@ -152,6 +170,7 @@ const App = () => {
                 <input
                   type="password"
                   placeholder="Lösenord"
+                  title="Välj ett lösenord"
                   value={password}
                   onChange={(e) => {
                     setPassword(e.target.value);
@@ -162,7 +181,9 @@ const App = () => {
                   <p style={{ color: "red" }}>Fyll i lösenord.</p>
                 )}
               </div>
-              <button className="submit-btn" onClick={handleRegister}>Registrera</button>
+              <button className="submit-btn" onClick={handleRegister}>
+                Registrera
+              </button>
             </div>
           )}
 
@@ -174,6 +195,7 @@ const App = () => {
                 <input
                   type="text"
                   placeholder="Användarnamn"
+                  title="Skriv ditt användarnamn"
                   value={username}
                   onChange={(e) => {
                     setUsername(e.target.value);
@@ -187,6 +209,7 @@ const App = () => {
                 <input
                   type="password"
                   placeholder="Lösenord"
+                  title="Skriv ditt lösenord "
                   value={password}
                   onChange={(e) => {
                     setPassword(e.target.value);
@@ -197,14 +220,29 @@ const App = () => {
                   <p style={{ color: "red" }}>Fyll i lösenord.</p>
                 )}
               </div>
-              <button className="submit-btn" onClick={handleLogin}>Logga in</button>
+              <button className="submit-btn" onClick={handleLogin}>
+                Logga in
+              </button>
             </div>
           )}
 
           <div className="select-container">
-            <button className="select-btn" onClick={() => setShowForm("register")}>{/*Registrera*/}<PersonAddIcon/></button>
-            <button className="select-btn" onClick={() => setShowForm("login")}>{/*Logga in*/}<VpnKeyIcon/></button>
-            <button className="select-btn" onClick={handleBasket}>{/*Korg*/}<ShoppingCartIcon/></button>
+            <button
+              className="select-btn"
+              onClick={() => setShowForm("register")}
+              title="Registrera"
+            >
+              {/*Registrera*/}
+              <PersonAddIcon />
+            </button>
+            <button className="select-btn" onClick={() => setShowForm("login")} title="Logga in">
+              {/*Logga in*/}
+              <VpnKeyIcon />
+            </button>
+            <button className="select-btn" onClick={handleBasket} title="Cart">
+              {/*Korg*/}
+              <ShoppingCartIcon />
+            </button>
           </div>
         </div>
       )}

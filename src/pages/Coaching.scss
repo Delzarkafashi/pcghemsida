@@ -12,6 +12,33 @@
     justify-content: space-evenly;
     gap: 5em;
   }
+  .speech-btn {
+    display: flex;
+    align-items: center;
+    gap: 0em;
+    height: fit-content;
+    width: fit-content;
+    border: 3px solid rgba(0, 0, 0, 0.2);
+    padding: 0.5rem;
+    border-radius: 10px;
+    width: fit-content;
+    line-height: 1.5rem;
+    background-color: rgba(22, 213, 1, 0.659);
+    outline: none;
+    font-style: normal;
+    font-size: larger;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+  }
+
+  .speech-btn:hover {
+    border-radius: 5px;
+    gap: 1rem;
+    box-shadow: 0px 3px 8px 3px rgba(0, 0, 0, 0.6);
+    background-color: rgb(114, 239, 114);
+    transition: ease-in-out;
+    transition-property: all;
+    transition-duration: 0.4s;
+  }
   
   .coaching-cykling {
     background-color: rgba(112, 69, 9, 0.4);
