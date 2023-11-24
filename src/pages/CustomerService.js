@@ -78,7 +78,7 @@ export default function CustomerService() {
               helperText="Please enter a valid email address"
             />
             <label htmlFor="standard-multiline-static">Description</label>
-            <TextField sx={{backgroundColor: 'red'}}
+            <TextField 
               id="standard-multiline-flexible"
               label="Multiline"
               multiline
