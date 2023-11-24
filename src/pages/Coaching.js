@@ -58,7 +58,7 @@ export default function Coaching() {
     <div className='wrapper'>
       <div className='coaching-bjj'>
         <p className='coaching-par'>
-        <button className='speech-btn' onClick={() => handleClick(textToReadBJJ)}>
+        <button className='coach-btn' onClick={() => handleClick(textToReadBJJ)}>
           <PlayArrowIcon fontSize='small' />
           {speaking ? 'Stoppa uppläsning' : 'Starta uppläsning'}
         </button>
@@ -73,7 +73,7 @@ export default function Coaching() {
 
       <div className='coaching-cykling'>
         <p className='coaching-par'>
-        <button className='speech-btn' onClick={() => handleClick(textToReadCykling)}>
+        <button className='coach-btn' onClick={() => handleClick(textToReadCykling)}>
         <PlayArrowIcon fontSize='small' />
           {speaking ? 'Stoppa uppläsning' : 'Starta uppläsning'}
         </button>
@@ -88,7 +88,7 @@ export default function Coaching() {
 
       <div className='coaching-fotboll'>
         <p className='coaching-par'>
-        <button className='speech-btn' onClick={() => handleClick(textToReadFotboll)}>
+        <button className='coach-btn' onClick={() => handleClick(textToReadFotboll)}>
         <PlayArrowIcon fontSize='small' />
           {speaking ? 'Stoppa uppläsning' : 'Starta uppläsning'}
         </button>
