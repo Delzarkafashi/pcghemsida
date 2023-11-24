@@ -78,7 +78,8 @@
     justify-content: flex-end;
    }
 
-   .user-settings {
+
+   .user-settings { 
     position: fixed;
     top: 20px;
     display: flex;
@@ -91,8 +92,22 @@
     padding: 0.5rem;
     font-style: italic;
     font-family:Georgia, 'Times New Roman', Times, serif;
-    z-index: 0;
+    
   }
+
+  .valkommen {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    padding: 0px;
+    line-height: 0rem;
+    gap: 2rem;
+  }
+  .valkommen-btn {
+    display: flex;
+    gap: 0.5rem;
+  }
+
 
   .user-container {
     display: flex;
@@ -103,6 +118,7 @@
   }
   
   .user-form {
+   
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -145,7 +161,7 @@
     background-color: rgb(114, 158, 239);
     transition: ease-in-out;
     transition-property: all;
-    transition-duration: 0.5s;
+    transition-duration: 0.4s;
 
   }  
 
