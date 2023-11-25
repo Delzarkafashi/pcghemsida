@@ -5,6 +5,7 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import PersonAddIcon from '@mui/icons-material/PersonAdd';
 import VpnKeyIcon from '@mui/icons-material/VpnKey';
 import CloseIcon from '@mui/icons-material/Close';
+import LogoutIcon from '@mui/icons-material/Logout';
 
 const App = () => {
   const [username, setUsername] = useState("");
@@ -95,6 +96,7 @@ const App = () => {
       return (
         <button
           className="x-btn"
+          title="Stäng"
           onClick={showForm ? () => setShowForm(false) : null}
         >
           <CloseIcon/>
@@ -105,11 +107,23 @@ const App = () => {
   return (
     <div className="user-settings">
       {loggedIn ? (
-        <div>
+        <div className="valkommen">
           <p>Välkommen, {loggedInUser}!</p>
-          <div>
-            <button onClick={handleLogout}>Logga ut</button>
-            <button onClick={handleBasket}>Korg</button>
+          <div className="valkommen-btn">
+            <button
+              className="select-btn"
+              onClick={handleLogout}
+              title="Logga ut"
+            >
+              <LogoutIcon />
+            </button>
+            <button 
+              className="select-btn" 
+              onClick={handleBasket} 
+              title="Cart"
+            >
+              <ShoppingCartIcon />
+            </button>
           </div>
         </div>
       ) : (
