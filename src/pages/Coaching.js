@@ -37,7 +37,7 @@ export default function Coaching() {
 
   const headerTextFotboll = "Fotboll";
   const paragraphTextFotboll = `
-    Fotboll är en passionerad och global sport som förenar människor över hela världen. 
+    Fotboll fotboll är en passionerad och global sport som förenar människor över hela världen. 
     Spelet spelas på gräsplaner, gator och arenor och erbjuder en kombination av skicklighet, taktik och lagarbete. 
     Målet är enkelt: att göra fler mål än motståndaren genom precisionsskott och snygga passningar. 
     Fotboll är inte bara en fysisk utmaning utan också en källa till gemenskap och glädje. 
