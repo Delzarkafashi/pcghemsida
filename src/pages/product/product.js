@@ -1,15 +1,11 @@
-import React, { useContext } from 'react'
-import product_data from "../data/product_data"; // ollo
-import { ShopContext } from '../context/shop-context'; 
+import React from 'react'
+import product_card from "../../pages/product/product_data.js";
 
-
-// ädrat
-const Product = () =>{
-    const {} = useContext(ShopContext);
-    console.log(product_data);
-    const listItems = product_data.map((item) => 
+const mainContent = () =>{
+    console.log(product_card);
+    const listItems = product_card.map((item) => 
     <div className="card" key= {item.id}>
-        <div className="card_img" alt=" ">
+        <div className="card_img">
             <img src = {item.thumb} />
         </div>
        <div className="card_header">
@@ -29,5 +25,5 @@ const Product = () =>{
             {listItems}
         </div>
     )
-}  // macha var
-export default Product;
+}
+export default mainContent;

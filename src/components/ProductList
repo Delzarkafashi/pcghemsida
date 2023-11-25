@@ -1,0 +1,17 @@
+import { Product } from "./Product";
+
+function ProductList() {
+  const products = [
+    { id: 1, productName: "Product 1", price: 10, productImage: "image1.jpg" },
+    { id: 2, productName: "Product 2", price: 20, productImage: "image2.jpg" },
+    // Other products
+  ];
+
+  return (
+    <div>
+      {products.map((product) => (
+        <Product key={product.id} data={product} />
+      ))}
+    </div>
+  );
+}

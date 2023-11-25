@@ -22,9 +22,10 @@ export default function Navbar() {
         </Link> */}
         <ul className="nav-bar">
           <CustomLink to="/">Home</CustomLink>
-          <CustomLink to="/product">Product</CustomLink>
+          <CustomLink to="/product">Shop</CustomLink>
           <CustomLink to="/coaching">Coaching</CustomLink>
           <CustomLink to="/customerservice">Customer service</CustomLink>
+          <CustomLink to="/cart">Cart</CustomLink>
         </ul>
       </div>
     </nav>
