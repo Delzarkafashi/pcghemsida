@@ -80,15 +80,15 @@ const App = () => {
     setShowBasket(false);
   };
 
- const handleBasket = () => {
-  if (loggedIn) {
-    navigate("/korg"); // Navigera till korgen om användaren är inloggad
-  } else {
-    // Visa ett meddelande om användaren inte är inloggad
-    alert("Du måste vara inloggad för att se innehållet i korgen.");
-  }
-};
 
+  const handleBasket = () => {
+    if (loggedIn) {
+      navigate("/korg"); //olle
+    } else {
+      {loggedIn === false && setShowForm('login');}
+      alert("Du måste vara inloggad för att se innehållet i korgen.");
+    }
+  };
 
   function HandleXBtn (showForm){
     if (!showForm === "register" || 

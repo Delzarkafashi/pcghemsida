@@ -1,6 +1,7 @@
 // src/pages/Product.js
 import React from 'react';
 import { useCart } from '../components/CartContext';
+import '../pages/product.css';
 
 // Export productData
 export const productData = [
@@ -31,7 +32,7 @@ const Product = () => {
   };
 
   return (
-    <div>
+    <div className='products'>
       {productData.map((product, index) => (
         <div key={index}>
           <h3>{product.name}</h3>
