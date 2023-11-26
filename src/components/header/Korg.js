@@ -1,6 +1,6 @@
 import React from 'react';
 import { useCart } from '../CartContext';
-import './korg.css';
+import './Korg.css';
 
 const Korg = () => {
   const { cartItems, addToCart, removeFromCart } = useCart();
