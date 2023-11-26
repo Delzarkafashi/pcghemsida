@@ -5,10 +5,11 @@ import Main from './components/main/Main';
 import Coaching from './pages/Coaching';
 import Home from './pages/Home';
 import CustomerService from './pages/CustomerService';
-import Product from './pages/Product';
+import Product, { productData } from './pages/Product';
 import Footer from './components/footer/Footer';
 import Korg from './components/header/Korg';
 import { CartProvider } from "./components/CartContext";
+import SearchResultPage from './pages/SearchResultPage';
 
 import './App.css';
 
@@ -25,6 +26,7 @@ function App() {
               <Route path="/coaching" element={<Coaching />} />
               <Route path="/customerservice" element={<CustomerService />} />
               <Route path="/korg" element={<Korg />} />
+              <Route path="/search" element={<SearchResultPage />} />
             </Routes>
           </div>
           <Main />
