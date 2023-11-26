@@ -80,6 +80,7 @@ const App = () => {
     setShowBasket(false);
   };
 
+
   const handleBasket = () => {
     if (loggedIn) {
       navigate("/korg"); //olle
