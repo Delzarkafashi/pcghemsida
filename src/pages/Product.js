@@ -1,5 +1,6 @@
 import React from 'react';
 import { useCart } from '../components/CartContext';
+import '../pages/product.css';
 
 // Exportera produktdatan
 const productData = [
@@ -29,7 +30,7 @@ const Products = () => {
   };
 
   return (
-    <div>
+    <div className='products'>
       {productData.map((product, index) => (
         <div key={index}>
           <h3>{product.name}</h3>

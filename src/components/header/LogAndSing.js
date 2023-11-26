@@ -84,6 +84,7 @@ const App = () => {
     if (loggedIn) {
       navigate("/korg"); //olle
     } else {
+      {loggedIn === false && setShowForm('login');}
       alert("Du måste vara inloggad för att se innehållet i korgen.");
     }
   };

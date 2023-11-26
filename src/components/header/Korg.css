@@ -1,0 +1,39 @@
+.cart-container {
+    /* background-color: blue; */
+    padding: 1rem;
+}
+
+.items-btns {
+    display: flex;
+    gap: 1rem;
+}
+
+
+.item-ul {
+    padding: 0px;
+}
+
+.item-info-row {
+    display: flex;
+    justify-content: space-around;
+    /* background-color: aqua; */
+    text-decoration: none;
+    margin: 1rem ;
+}
+
+.quantity-price {
+
+}
+
+.quantity-price{
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+
+.total {
+    display: flex;
+    justify-content: space-around;
+}
+
