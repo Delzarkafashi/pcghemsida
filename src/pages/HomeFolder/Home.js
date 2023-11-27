@@ -1,10 +1,11 @@
 import "./Home.css"
-import bike from "./PageImage/bicycle.jpg"
-import coach from "./PageImage/Coaching.jpg"
-import customer from "./PageImage/customer-service.jpg"
+import bike from "../PageImage/bicycle.jpg"
+import coach from "../PageImage/Coaching.jpg"
+import customer from "../PageImage/customer-service.jpg"
 import { Link } from "react-router-dom"
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import StopIcon from '@mui/icons-material/Stop';
+import { useSpeechSynthesis } from 'react-speech-kit';
 
 
 export default function Home() {
