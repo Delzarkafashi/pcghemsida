@@ -10,7 +10,7 @@ import Container from "@mui/material/Container";
 import Fab from "@mui/material/Fab";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import Fade from "@mui/material/Fade";
-import Navbar from "../header/Navbar.js";
+import Navbar from "../../header/NavbarFolder/Navbar.js";
 
 function ScrollTop(props) {
   const { children, window } = props;

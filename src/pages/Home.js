@@ -1,8 +1,7 @@
 import "./Home.css"
-import bike from "./PI/bicycle.jpg"
-import coach from "./PI/Coaching.jpg"
-import bjj from "./PI/bjj-gi.jpg"
-import customer from "./PI/customer-service.jpg"
+import bike from "./PageImage/bicycle.jpg"
+import coach from "./PageImage/Coaching.jpg"
+import customer from "./PageImage/customer-service.jpg"
 import { Link } from "react-router-dom"
 
 

@@ -1,7 +1,7 @@
 import { Link, resolvePath, useMatch, useResolvedPath } from "react-router-dom"
-import SearchBar from './SearchBar';
-import "./header.css"
-import LogAndSing from './LogAndSing';
+import SearchBar from '../SearchBarFolder/SearchBar';
+import "./Navbar.css"
+import LogAndSing from '../LogAndSingFolder/LogAndSing';
 
 export default function Navbar() {
   return (

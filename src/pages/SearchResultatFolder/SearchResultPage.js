@@ -1,6 +1,6 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
-import { Product, productData } from "./Product"; // Observera import här
+import { Product, productData } from "../ProductFolder/Product"; // Observera import här
 
 const SearchResultPage = () => {
   const location = useLocation();

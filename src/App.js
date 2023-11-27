@@ -1,15 +1,15 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Navbar from './components/header/Navbar';
+import Navbar from './components/header/NavbarFolder/Navbar';
 import Main from './components/main/Main';
-import Coaching from './pages/Coaching';
+import Coaching from './pages/CoachingFolder/Coaching';
 import Home from './pages/Home';
-import CustomerService from './pages/CustomerService';
-import Product, { productData } from './pages/Product';
+import CustomerService from './pages/CustomerFolder/CustomerService';
+import Product, { productData } from './pages/ProductFolder/Product';
 import Footer from './components/footer/Footer';
-import Korg from './components/header/Korg';
+import Korg from './components/header/KorgFolder/Korg';
 import { CartProvider } from "./components/CartContext";
-import SearchResultPage from './pages/SearchResultPage';
+import SearchResultPage from './pages/SearchResultatFolder/SearchResultPage';
 
 import './App.css';
 

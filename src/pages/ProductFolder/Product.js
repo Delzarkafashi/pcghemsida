@@ -1,7 +1,7 @@
 // src/pages/Product.js
 import React from 'react';
-import { useCart } from '../components/CartContext';
-import '../pages/product.css';
+import { useCart } from '../../components/CartContext';
+import './product.css';
 
 // Export productData
 export const productData = [

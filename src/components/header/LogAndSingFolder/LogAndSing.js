@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Korg from "./Korg";
+import Korg from "../KorgFolder/Korg";
 import { useNavigate } from "react-router"; //olle
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import PersonAddIcon from '@mui/icons-material/PersonAdd';

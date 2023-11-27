@@ -1,10 +1,10 @@
 import React from 'react';
 import { useSpeechSynthesis } from 'react-speech-kit';
 import './Coaching.css';
-import bjj from './PI/bjj.jpg';
-import cykling from './PI/cykling.jpg';
-import fotboll from './PI/fotboll.jpg';
-import Booking from '../components/Booking';
+import bjj from "../PageImage/bjj.jpg";
+import cykling from '../PageImage/cykling.jpg';
+import fotboll from '../PageImage/fotboll.jpg';
+import Booking from '../../components/main/BokingFolder/Booking';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import StopIcon from '@mui/icons-material/Stop';
 

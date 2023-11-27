@@ -1,5 +1,5 @@
 import React from 'react'
-import ScrollTop from './TopBtn.js'
+import ScrollTop from './TopBtnFolder/TopBtn.js'
 
 function main() {
   return (
