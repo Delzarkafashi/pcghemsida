@@ -56,7 +56,3 @@ const Korg = () => {
 };
 
 export default Korg;
-
-
-
-
