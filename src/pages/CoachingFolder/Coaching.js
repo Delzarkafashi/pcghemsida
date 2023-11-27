@@ -48,36 +48,36 @@ export default function Coaching() {
   return (
     <div className='wrapper'>
       <div className='coaching-bjj'>
-        <p className='coaching-par'>
+        <div className='coaching-par'>
           <SpeechButton textToRead={textToReadBJJ} />
           <h3>{headerTextBJJ}</h3>
           <p>{paragraphTextBJJ}</p>
           <Booking />
-        </p>
+        </div>
         <a href='https://calendly.com/delzarkafashi/how-can-we-help-you' target='_blank' title='två man som tävlar i BJJ' rel='noopener noreferrer'>
           <img src={bjj} alt='Brazilian Jiu-Jitsu' width={450} height={320} />
         </a>
       </div>
 
       <div className='coaching-cykling'>
-        <p className='coaching-par'>
+        <div className='coaching-par'>
           <SpeechButton textToRead={textToReadCykling} />
           <h3>{headerTextCykling}</h3>
           <p>{paragraphTextCykling}</p>
           <Booking />
-        </p>
+        </div>
         <a href='https://calendly.com/delzarkafashi/how-can-we-help-you' target='_blank'  title='en kvinna som cyklar' rel='noopener noreferrer'>
           <img src={cykling} alt='Cykling' width={450} />
         </a>
       </div>
 
       <div className='coaching-fotboll'>
-        <p className='coaching-par'>
+        <div className='coaching-par'>
           <SpeechButton textToRead={textToReadFotboll} />
           <h3>{headerTextFotboll}</h3>
           <p>{paragraphTextFotboll}</p>
           <Booking />
-        </p>
+        </div>
         <a href='https://calendly.com/delzarkafashi/how-can-we-help-you' target='_blank'  title='en bild på en fotboll' rel='noopener noreferrer'>
           <img src={fotboll} alt='fotboll' width={450} />
         </a>

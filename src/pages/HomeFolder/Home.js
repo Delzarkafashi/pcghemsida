@@ -5,6 +5,7 @@ import coach from "../PageImage/Coaching.jpg";
 import customer from "../PageImage/customer-service.jpg";
 import { Link } from "react-router-dom";
 import SpeechButton from '../../components/buttens/SpeechBtn';
+import "../../components/MobileDesign/MobileDesign.css";
 
 export default function Home() {
   const headerTextCoaching = "Coaching";
@@ -60,12 +61,12 @@ export default function Home() {
   return (
     <div className="wrapper">
       <div className="home-div">
-        <p className="home-par">
+        <div>
           <SpeechButton textToRead={textToReadCoaching} />
           <h3>{headerTextCoaching}</h3>
           <p>{paragraphTextCoaching}</p>
-        </p>
-        <Link to="/coaching" rel="noreferrer">
+        </div>
+        <Link to="/coaching" rel="noreferrer" className="home-img">
           <img src={coach} alt="Coaching" width={450} />
         </Link>
       </div>
@@ -74,21 +75,22 @@ export default function Home() {
         <Link to="/product" rel="noreferrer">
           <img src={bike} alt="Bike" width={450} />
         </Link>
-        <p className="home-par">
+        <div >
           <SpeechButton textToRead={textToReadProducts} />
           <h3>{headerTextProducts}</h3>
           <p>{paragraphTextProducts}</p>
-        </p>
+        </div>
       </div>
 
       <div className="home-div3">
-        <p className="home-par">
+        <div>
           <SpeechButton textToRead={textToReadCustomerService} />
           <h3>{headerTextCustomerService}</h3>
           <p>{paragraphTextCustomerService}</p>
-        </p>
+        </div>
         <Link to="/customerservice" rel="noreferrer">
-          <img src={customer} alt="customer-service" width={500} height={320} />
+          <img src={customer} 
+          className="home-image" alt="customer-service" width={500} height={320} />
         </Link>
       </div>
     </div>

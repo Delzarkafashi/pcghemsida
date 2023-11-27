@@ -44,7 +44,7 @@ const Korg = () => {
       <div>
         <hr />
         <div className="total">
-          <div>Total</div>
+          <div className='total-row'>Total</div>
           <div className='quantity-total'>
             <div>Total producter : {quantifier}</div>
             <div>Total price : {total} :-</div>

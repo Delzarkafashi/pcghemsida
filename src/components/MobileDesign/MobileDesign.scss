@@ -1,0 +1,147 @@
+@media only screen and (max-width: 500px ) {
+
+    /*---- Header ----*/
+
+    .nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .name {
+        text-align: start;
+        padding-left: 1rem;
+    }
+
+    .select-container {
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .SN {
+        display: flex;
+        flex-direction: column;
+        margin-top: 0.7rem;
+    }
+
+    .search-input {
+        width: 12rem;
+    }
+
+    /*---- Cart Page----*/
+
+    .total {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0;
+        padding-top: 1rem;
+    }
+
+    .total-row {
+        display: none;
+    }
+
+    /*---- Home Page ----*/
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .home-div, .home-div2, .home-div3{
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        
+    }
+
+    .home-div p, .home-div2 p, .home-div3 p {
+        width: 15rem !important;
+    }
+
+    img { 
+        justify-content: center;
+        margin: 0rem;
+        width: 16rem;
+    }
+    .home-image {
+        height: fit-content;
+    }
+
+    /*---- Coaching Page ----*/
+
+    .coaching-par {
+        align-items: center;
+    }
+
+    .coaching-bjj {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .coaching-bjj div {
+        display: flex;
+        flex-direction: column;
+        width: 15rem !important;
+    }
+
+    .coaching-bjj img {
+        height: 12rem;
+    }
+
+    .coaching-cykling {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .coaching-cykling div {
+        display: flex;
+        flex-direction: column;
+        width: 15rem !important;
+    }
+
+    .coaching-cykling img {
+        height: 12rem;
+    }
+
+    .coaching-fotboll {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .coaching-fotboll div {
+        display: flex;
+        flex-direction: column;
+        width: 15rem !important;
+    }
+
+    .coaching-fotboll img {
+        height: 12rem;
+    }
+
+    
+
+
+
+    /*---- Footer ----*/
+
+    .main-footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container-sm img {
+        width: auto;
+    }
+
+    .col {
+        margin: 0;
+    }
+
+}
