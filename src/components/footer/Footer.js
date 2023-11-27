@@ -1,6 +1,7 @@
 import React from "react";
 import "./Footer.css";
 import SM from './SM/SM.js';
+import "../MobileDesign/MobileDesign.css";
 
 
 const Footer = () => {

@@ -13,6 +13,7 @@ function SearchBar() {
   return (
     <div style={{ marginTop: "10px", padding: "0px 10px"}}>
       <input
+        className="search-input"
         type="text"
         placeholder="Sök..."
         value={searchQuery}
