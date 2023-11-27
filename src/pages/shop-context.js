@@ -1,55 +1,58 @@
-import React, { createContext, useState, useContext } from 'react';
+import { createContext, useEffect, useState } from "react";
+import { PRODUCTS } from "../products";
 
-// Skapa en ny kontext
-const ShopContext = createContext();
+export const ShopContext = createContext(null);
 
-// Skapa en anpassad hook för att använda kontexten
-export const useShopContext = () => {
-  return useContext(ShopContext);
+const getDefaultCart = () => {
+  let cart = {};
+  for (let i = 1; i < PRODUCTS.length + 1; i++) {
+    cart[i] = 0;
+  }
+  return cart;
 };
 
-// En wrapperkomponent för att ge tillgång till kontexten till sina barnkomponenter
-export const ShopProvider = ({ children }) => {
-  const [cartItems, setCartItems] = useState({}); // Ditt initiala tillstånd för varukorgen
-
-  // Lägg till övriga funktioner och tillstånd som behövs för din shopping-logik
-
-  const addToCart = (productId) => {
-    // Implementera logik för att lägga till produkten i varukorgen
-  };
-
-  const removeFromCart = (productId) => {
-    // Implementera logik för att ta bort produkten från varukorgen
-  };
-
-  const updateCartItemCount = (count, productId) => {
-    // Implementera logik för att uppdatera antalet för en produkt i varukorgen
-  };
+export const ShopContextProvider = (props) => {
+  const [cartItems, setCartItems] = useState(getDefaultCart());
 
   const getTotalCartAmount = () => {
-    // Implementera logik för att beräkna det totala beloppet i varukorgen
+    let totalAmount = 0;
+    for (const item in cartItems) {
+      if (cartItems[item] > 0) {
+        let itemInfo = PRODUCTS.find((product) => product.id === Number(item));
+        totalAmount += cartItems[item] * itemInfo.price;
+      }
+    }
+    return totalAmount;
+  };
+
+  const addToCart = (itemId) => {
+    setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
+  };
+
+  const removeFromCart = (itemId) => {
+    setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }));
+  };
+
+  const updateCartItemCount = (newAmount, itemId) => {
+    setCartItems((prev) => ({ ...prev, [itemId]: newAmount }));
   };
 
   const checkout = () => {
-    // Implementera logik för att slutföra köpet (till exempel tömma varukorgen)
+    setCartItems(getDefaultCart());
   };
 
-  // Dina andra tillstånd och funktioner här
-
-  // Tillhandahåll kontextvärden till sina barn
   const contextValue = {
     cartItems,
     addToCart,
-    removeFromCart,
     updateCartItemCount,
+    removeFromCart,
     getTotalCartAmount,
     checkout,
-    // Dina andra kontextvärden här
   };
 
   return (
     <ShopContext.Provider value={contextValue}>
-      {children}
+      {props.children}
     </ShopContext.Provider>
   );
 };

@@ -7,7 +7,7 @@ import Home from './pages/Home';
 import CustomerService from './pages/CustomerService';
 import Product, { productData } from './pages/Product';
 import Footer from './components/footer/Footer';
-import Korg from './components/header/Korg';
+import Korg from "./components/header/Korg.js";
 import { CartProvider } from "./components/CartContext";
 import SearchResultPage from './pages/SearchResultPage';
 
