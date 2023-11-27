@@ -21,19 +21,22 @@
     margin: 1rem ;
 }
 
-.quantity-price {
+.total {
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+}
 
+.quantity-total {
+    display: flex;
+    gap: 1rem;
 }
 
 .quantity-price{
     display: flex;
     justify-content: space-between;
-    gap: 2rem;
+    gap: 7rem;
 }
 
 
-.total {
-    display: flex;
-    justify-content: space-around;
-}
 

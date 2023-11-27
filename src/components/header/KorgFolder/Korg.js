@@ -44,10 +44,10 @@ const Korg = () => {
       <div>
         <hr />
         <div className="total">
-          <div>Total :</div>
+          <div>Total</div>
           <div className='quantity-total'>
-            <div>{quantifier}</div>
-            <div>{total}</div>
+            <div>Total producter : {quantifier}</div>
+            <div>Total price : {total} :-</div>
           </div>
         </div>
       </div>
