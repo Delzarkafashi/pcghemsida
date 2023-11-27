@@ -6,6 +6,7 @@ import PersonAddIcon from '@mui/icons-material/PersonAdd';
 import VpnKeyIcon from '@mui/icons-material/VpnKey';
 import CloseIcon from '@mui/icons-material/Close';
 import LogoutIcon from '@mui/icons-material/Logout';
+import "./LogAndSing.css"
 
 const App = () => {
   const [username, setUsername] = useState("");

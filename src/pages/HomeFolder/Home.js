@@ -1,32 +1,28 @@
-import "./Home.css"
-import bike from "../PageImage/bicycle.jpg"
-import coach from "../PageImage/Coaching.jpg"
-import customer from "../PageImage/customer-service.jpg"
-import { Link } from "react-router-dom"
-import PlayArrowIcon from '@mui/icons-material/PlayArrow';
-import StopIcon from '@mui/icons-material/Stop';
-import { useSpeechSynthesis } from 'react-speech-kit';
-
+// Home.js
+import "./Home.css";
+import bike from "../PageImage/bicycle.jpg";
+import coach from "../PageImage/Coaching.jpg";
+import customer from "../PageImage/customer-service.jpg";
+import { Link } from "react-router-dom";
+import SpeechButton from '../../components/buttens/SpeechBtn';
 
 export default function Home() {
-  const { speak, speaking, cancel } = useSpeechSynthesis();
-
   const headerTextCoaching = "Coaching";
   const paragraphTextCoaching = `
-  Coachingtjänster är avgörande för personlig och professionell
-  utveckling genom att erbjuda skräddarsydd vägledning och stöd.
-  Oavsett om det gäller karriär, kompetensutveckling eller livsbalans,
-  ger coaching en strukturerad metod för att nå mål. Genom aktivt
-  lyssnande och konstruktiv feedback hjälper coacher klienter att
-  identifiera styrkor och övervinna utmaningar. Denna interaktion
-  främjar självmedvetenhet och ger en känsla av riktning, vilket
-  befäster individens förmåga att navigera genom livets komplexiteter
-  för kontinuerlig tillväxt och framgång.`;
+    Coachingtjänster är avgörande för personlig och professionell
+    utveckling genom att erbjuda skräddarsydd vägledning och stöd.
+    Oavsett om det gäller karriär, kompetensutveckling eller livsbalans,
+    ger coaching en strukturerad metod för att nå mål. Genom aktivt
+    lyssnande och konstruktiv feedback hjälper coacher klienter att
+    identifiera styrkor och övervinna utmaningar. Denna interaktion
+    främjar självmedvetenhet och ger en känsla av riktning, vilket
+    befäster individens förmåga att navigera genom livets komplexiteter
+    för kontinuerlig tillväxt och framgång.`;
 
-    const textToReadCoaching = `${headerTextCoaching}. ${paragraphTextCoaching}`;  
-    
-    const headerTextProducts = "Products";
-    const paragraphTextProducts = `
+  const textToReadCoaching = `${headerTextCoaching}. ${paragraphTextCoaching}`;
+
+  const headerTextProducts = "Products";
+  const paragraphTextProducts = `
     Sportprodukter spelar en central roll i att möjliggöra och förbättra
     idrottsprestationer. Oavsett om det handlar om specialiserad
     utrustning för träning, kläder för optimal prestanda eller
@@ -41,11 +37,10 @@ export default function Home() {
     sportprodukter att vara en drivkraft för framsteg och prestation
     inom olika idrottsdiscipliner.`;
 
-    const textToReadProducts = `${headerTextProducts}. ${paragraphTextProducts}`;
-    
-    
-    const headerTextCustomerService = "Customer Service";
-    const paragraphTextCustomerService = `
+  const textToReadProducts = `${headerTextProducts}. ${paragraphTextProducts}`;
+
+  const headerTextCustomerService = "Customer Service";
+  const paragraphTextCustomerService = `
     Kundservice är hjärtat i varje företags relation med sina kunder och
     utgör grunden för att skapa en positiv varumärkesupplevelse.
     Kundserviceprodukter, såsom interaktiva digitala plattformar,
@@ -60,60 +55,42 @@ export default function Home() {
     för att bygga långsiktiga relationer och upprätthålla en stark
     företagsimage.`;
 
-    const textToReadCustomerService = `${headerTextCustomerService}. ${paragraphTextCustomerService}`;
+  const textToReadCustomerService = `${headerTextCustomerService}. ${paragraphTextCustomerService}`;
 
-    const handleClick = (text) => {
-      if (!speaking) {
-        speak({ text });
-      } else {
-        cancel();
-      }
-    };
-
-
-    return (
-      <div className="wrapper">
-        <div className="home-div">
-          <p className="home-par">
-          <button className='coach-btn' onClick={() => handleClick(textToReadCoaching)}>
-            {speaking ? <StopIcon fontSize='small' /> : <PlayArrowIcon fontSize='small' />}
-            {speaking ? 'Stoppa uppläsning' : 'Starta uppläsning'}
-          </button>
+  return (
+    <div className="wrapper">
+      <div className="home-div">
+        <p className="home-par">
+          <SpeechButton textToRead={textToReadCoaching} />
           <h3>{headerTextCoaching}</h3>
           <p>{paragraphTextCoaching}</p>
-          </p>
-          <Link to="/coaching" rel="noreferrer">
-            <img src={coach} alt="Coaching" width={450} />
-          </Link>
-        </div>
+        </p>
+        <Link to="/coaching" rel="noreferrer">
+          <img src={coach} alt="Coaching" width={450} />
+        </Link>
+      </div>
 
-        <div className="home-div2">
-          <Link to="/product" rel="noreferrer">
-            <img src={bike} alt="Bike" width={450} />
-          </Link>
-          <p className="home-par">
-          <button className='coach-btn' onClick={() => handleClick(textToReadProducts)}>
-            {speaking ? <StopIcon fontSize='small' /> : <PlayArrowIcon fontSize='small' />}
-            {speaking ? 'Stoppa uppläsning' : 'Starta uppläsning'}
-          </button>
+      <div className="home-div2">
+        <Link to="/product" rel="noreferrer">
+          <img src={bike} alt="Bike" width={450} />
+        </Link>
+        <p className="home-par">
+          <SpeechButton textToRead={textToReadProducts} />
           <h3>{headerTextProducts}</h3>
           <p>{paragraphTextProducts}</p>
-          </p>
-        </div>
+        </p>
+      </div>
 
-        <div className="home-div3">
-          <p className="home-par">
-          <button className='coach-btn' onClick={() => handleClick(textToReadCustomerService)}>
-            {speaking ? <StopIcon fontSize='small' /> : <PlayArrowIcon fontSize='small' />}
-            {speaking ? 'Stoppa uppläsning' : 'Starta uppläsning'}
-          </button>
+      <div className="home-div3">
+        <p className="home-par">
+          <SpeechButton textToRead={textToReadCustomerService} />
           <h3>{headerTextCustomerService}</h3>
           <p>{paragraphTextCustomerService}</p>
-          </p>
-          <Link to="/customerservice" rel="noreferrer">
-            <img src={customer} alt="customer-service" width={500} height={320} />
-          </Link>
-        </div>
+        </p>
+        <Link to="/customerservice" rel="noreferrer">
+          <img src={customer} alt="customer-service" width={500} height={320} />
+        </Link>
       </div>
-    );
+    </div>
+  );
 }

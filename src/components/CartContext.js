@@ -21,11 +21,13 @@ const CartProvider = ({ children }) => {
 
   const removeFromCart = (productName) => {
     setCartItems((prevCartItems) =>
-      prevCartItems.map((item) =>
-        item.name === productName
-          ? { ...item, quantity: Math.max(item.quantity - 1, 0) } // Minska kvantiteten, men inte under 0
-          : item
-      )
+      prevCartItems
+        .map((item) =>
+          item.name === productName
+            ? { ...item, quantity: Math.max(item.quantity - 1, 0) } 
+            : item
+        )
+        .filter((item) => item.quantity > 0) 
     );
   };
   

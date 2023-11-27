@@ -1,16 +1,13 @@
 import React from 'react';
-import { useSpeechSynthesis } from 'react-speech-kit';
-import './Coaching.css';
+import SpeechButton from '../../components/buttens/SpeechBtn';
+import './Coaching.css'; 
 import bjj from "../PageImage/bjj.jpg";
 import cykling from '../PageImage/cykling.jpg';
 import fotboll from '../PageImage/fotboll.jpg';
-import Booking from '../../components/main/BokingFolder/Booking';
-import PlayArrowIcon from '@mui/icons-material/PlayArrow';
-import StopIcon from '@mui/icons-material/Stop';
+import Booking from '../../components/buttens/BookingBtn';
+
 
 export default function Coaching() {
-  const { speak, speaking, cancel } = useSpeechSynthesis();
-
   const headerTextBJJ = "Brazilian Jiu-Jitsu (BJJ)";
   const paragraphTextBJJ = `
     Brazilian Jiu-Jitsu (BJJ) är en kampsport och självförsvarskonst som fokuserar på markkamp och 
@@ -48,22 +45,11 @@ export default function Coaching() {
 
   const textToReadFotboll = `${headerTextFotboll}. ${paragraphTextFotboll}`;
 
-  const handleClick = (text) => {
-    if (!speaking) {
-      speak({ text });
-    } else {
-      cancel();
-    }
-  };
-
   return (
     <div className='wrapper'>
       <div className='coaching-bjj'>
         <p className='coaching-par'>
-          <button className='coach-btn' onClick={() => handleClick(textToReadBJJ)}>
-            {speaking ? <StopIcon fontSize='small' /> : <PlayArrowIcon fontSize='small' />}
-            {speaking ? 'Stoppa uppläsning' : 'Starta uppläsning'}
-          </button>
+          <SpeechButton textToRead={textToReadBJJ} />
           <h3>{headerTextBJJ}</h3>
           <p>{paragraphTextBJJ}</p>
           <Booking />
@@ -75,10 +61,7 @@ export default function Coaching() {
 
       <div className='coaching-cykling'>
         <p className='coaching-par'>
-          <button className='coach-btn' onClick={() => handleClick(textToReadCykling)}>
-            {speaking ? <StopIcon fontSize='small' /> : <PlayArrowIcon fontSize='small' />}
-            {speaking ? 'Stoppa uppläsning' : 'Starta uppläsning'}
-          </button>
+          <SpeechButton textToRead={textToReadCykling} />
           <h3>{headerTextCykling}</h3>
           <p>{paragraphTextCykling}</p>
           <Booking />
@@ -90,10 +73,7 @@ export default function Coaching() {
 
       <div className='coaching-fotboll'>
         <p className='coaching-par'>
-          <button className='coach-btn' onClick={() => handleClick(textToReadFotboll)}>
-            {speaking ? <StopIcon fontSize='small' /> : <PlayArrowIcon fontSize='small' />}
-            {speaking ? 'Stoppa uppläsning' : 'Starta uppläsning'}
-          </button>
+          <SpeechButton textToRead={textToReadFotboll} />
           <h3>{headerTextFotboll}</h3>
           <p>{paragraphTextFotboll}</p>
           <Booking />
@@ -105,3 +85,4 @@ export default function Coaching() {
     </div>
   );
 }
+
