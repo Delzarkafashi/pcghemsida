@@ -15,19 +15,13 @@ const CartProvider = ({ children }) => {
       setCartItems(updatedCartItems);
     } else {
       // Product doesn't exist in the cart, add with quantity 1
-      setCartItems((prevCartItems) => [...prevCartItems, { ...product, quantity: 1 }]);
+      setCartItems((prevCartItems) => [...prevCartItems, { ...product, quantity: 1 }]); 
     }
   };
-/*
-  function deleteFromCart(id) {
-    setCartItems(
-      cartproducts =>
-      cartproducts.filter(currentproduct => {
-        return currentproduct.id != id;
-      })
-    )
-  }
-*/
+  const deleteFromCart = () => {
+    setCartItems([]);
+  };
+
   const removeFromCart = (productName) => {
     if (productName) {
       setCartItems((prevCartItems) =>
@@ -45,7 +39,7 @@ const CartProvider = ({ children }) => {
   };
 
   return (
-    <CartContext.Provider value={{ cartItems, addToCart, removeFromCart, }}>
+    <CartContext.Provider value={{ cartItems, addToCart, removeFromCart, deleteFromCart,}}>
       {children}
     </CartContext.Provider>
   );
