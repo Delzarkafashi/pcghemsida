@@ -8,17 +8,21 @@ const CartProvider = ({ children }) => {
 
   const addToCart = (product) => {
     const existingItemIndex = cartItems.findIndex((item) => item.name === product.name);
-
+  
     if (existingItemIndex !== -1) {
-      // Produkten finns redan i korgen, öka antalet
+      // Produkten finns redan i varukorgen, öka kvantiteten
       const updatedCartItems = [...cartItems];
       updatedCartItems[existingItemIndex].quantity += 1;
       setCartItems(updatedCartItems);
     } else {
-      // Produkten finns inte i korgen, lägg till med antal 1
-      setCartItems((prevCartItems) => [...prevCartItems, { ...product, quantity: 1 }]);
+      // Produkten finns inte i varukorgen, lägg till med kvantitet 1
+      setCartItems((prevCartItems) => [
+        ...prevCartItems,
+        { ...product, quantity: 1, image: product.thumb }
+      ]);
     }
   };
+  
 
   const removeFromCart = (productName) => {
     setCartItems((prevCartItems) =>

@@ -46,12 +46,10 @@
 
 // export default Product;
 
-// src/pages/Product.js
 import React from 'react';
 import { useCart } from '../../components/CartContext';
 import '../ProductFolder/product.css';
 
-// Export productData
 export const productData = [
   {
     id:1,
@@ -161,25 +159,22 @@ export const productData = [
   currency: "$",
   thumb: "./images/12.jpg"
 },
-
 ];
-
 
 const Product = () => {
   const { addToCart } = useCart();
 
   const handleBuyClick = (product) => {
-    
-    addToCart(product);
+    addToCart({ ...product, quantity: 1, image: product.thumb });
   };
 
   return (
     <div className='products'>
       {productData.map((product, index) => (
         <div className="card" key={product.id}>
-        <div className="card_img">
-        <img src={product.thumb} alt={product.name} />
-        </div>
+          <div className="card_img">
+            <img src={product.thumb} alt={product.name} />
+          </div>
           <h3>{product.name}</h3>
           <p>${product.price}</p>
           <p>{product.description}</p>
