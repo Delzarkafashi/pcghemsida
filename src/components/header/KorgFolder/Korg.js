@@ -21,6 +21,12 @@ const Korg = () => {
     return temp + item.quantity;
   }, 0);
 
+  const handleBuy = () => {
+    return (
+      alert("LURAT")
+    );
+  }
+
   return (
     <div className="cart-container">
       <h2>Din Korg</h2>
@@ -32,11 +38,14 @@ const Korg = () => {
             <th>Description</th>
             <th>Quantity</th>
             <th>Actions</th>
+            <th>Price</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody className='product-body'>
           {cartItems.map((item, index) => (
-            <tr key={index}>
+            <tr key={index}
+            className='product-row'
+            >
               <td>
                 <img src={item.image} alt={item.name} className="product-image" />
               </td>
@@ -44,13 +53,14 @@ const Korg = () => {
               <td>{item.description}</td>
               <td>{item.quantity}</td>
               <td>
-                <button className="korgbttn+" onClick={() => handleIncrease(item)}>
+                <button className="korgbttn-plus" onClick={() => handleIncrease(item)}>
                   +
                 </button>
-                <button className="korgbttn-" onClick={() => handleDecrease(item)}>
+                <button className="korgbttn-minus" onClick={() => handleDecrease(item)}>
                   -
                 </button>
               </td>
+              <td>{item.price}</td>
             </tr>
           ))}
         </tbody>
@@ -62,7 +72,10 @@ const Korg = () => {
           <div className="quantity-total">
             <div>Total products: {quantifier}</div>
             <div>Total price: {total} :-</div>
-            <button className='korgbttn' onClick={deleteFromCart}>Remove All Items</button>
+            <div className='del-buy'>
+              <button className='korgbttn-buy' onClick={handleBuy}>Buy</button>
+              <button className='korgbttn-del' onClick={deleteFromCart}>Remove All Items</button>
+            </div>
           </div>
         </div>
       </div>

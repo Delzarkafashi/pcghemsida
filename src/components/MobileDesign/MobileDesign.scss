@@ -40,15 +40,42 @@
 
     /*---- Cart Page----*/
 
-    .total {
+    th {
+        display: none;
+    }
+
+    .product-body {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .product-row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(62, 98, 56, 0.7);
+        box-shadow: 0px 3px 8px 3px rgba(0, 0, 0, 0.6);
+        border-radius: 10px;
+        color: white;
+    }
+
+    .total {
+        display: flex !important;
+        flex-direction: column !important;
         justify-content: space-around;
         align-items: center;
         padding: 0;
         padding-top: 1rem;
     }
 
+    .quantity-total {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    
     .total-row {
         display: none;
     }
