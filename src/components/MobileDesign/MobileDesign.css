@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @media only screen and (max-width: 500px) {
   /*---- Header ----*/
   .nav {
@@ -10,7 +11,7 @@
   }
   .select-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
   }
   .SN {
     display: flex;
@@ -19,6 +20,14 @@
   }
   .search-input {
     width: 12rem;
+  }
+  /*---- Välkommen ----*/
+  .valkommen p {
+    display: none;
+  }
+  .valkommen-btn {
+    display: flex;
+    flex-direction: column;
   }
   /*---- Cart Page----*/
   .total {
@@ -54,6 +63,7 @@
     height: -moz-fit-content;
     height: fit-content;
   }
+  /*---- Products Page ----*/
   .products {
     display: flex !important;
     flex-direction: column;

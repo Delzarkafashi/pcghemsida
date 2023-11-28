@@ -14,7 +14,7 @@
 
     .select-container {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         
     }
 
@@ -26,6 +26,17 @@
 
     .search-input {
         width: 12rem;
+    }
+
+    /*---- Välkommen ----*/
+
+    .valkommen p {
+        display: none;
+    }
+
+    .valkommen-btn {
+        display: flex;
+        flex-direction: column;
     }
 
     /*---- Cart Page----*/
@@ -70,6 +81,7 @@
         height: fit-content;
     }
 
+    /*---- Products Page ----*/
 
     .products {
 
