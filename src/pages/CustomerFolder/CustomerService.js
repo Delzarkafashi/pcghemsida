@@ -24,7 +24,8 @@ export default function CustomerService() {
     <>
       <form>
         <fieldset>
-          <FormControl sx={{ m: 1, minWidth: 120 }} size="small">
+        <h1>Customer Service</h1>
+          <FormControl>
             <InputLabel id="demo-select-small-label">Issue</InputLabel>
             <Select
               className="form-control"
@@ -80,10 +81,9 @@ export default function CustomerService() {
             <label htmlFor="standard-multiline-static">Description</label>
             <TextField 
               id="standard-multiline-flexible"
-              label="Multiline"
+              label="Comments"
               multiline
               maxRows={4}
-              variant="standard"
             />
           </div>
           <Button variant="contained" color="success" className="sub-button">

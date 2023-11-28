@@ -14,8 +14,7 @@
 
     .select-container {
         display: flex;
-        flex-direction: row;
-        
+        flex-direction: column;
     }
 
     .SN {
@@ -144,8 +143,21 @@
         height: 12rem;
     }
 
+    /*---- Customer Page ----*/
+
+    form {
+        margin: 1rem;
+        min-width: 5rem ;
+    }
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        width: 20rem !important;
+    }
     
 
+    // sx={{ m: 1, minWidth: 120 }} size="small"
 
 
     /*---- Footer ----*/
