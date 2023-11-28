@@ -9,31 +9,43 @@ const CartProvider = ({ children }) => {
     const existingItemIndex = cartItems.findIndex((item) => item.name === product.name);
 
     if (existingItemIndex !== -1) {
-      // Produkten finns redan i korgen, öka antalet
+      // Product already exists in the cart, increase quantity
       const updatedCartItems = [...cartItems];
       updatedCartItems[existingItemIndex].quantity += 1;
       setCartItems(updatedCartItems);
     } else {
-      // Produkten finns inte i korgen, lägg till med antal 1
+      // Product doesn't exist in the cart, add with quantity 1
       setCartItems((prevCartItems) => [...prevCartItems, { ...product, quantity: 1 }]);
     }
   };
-
+/*
+  function deleteFromCart(id) {
+    setCartItems(
+      cartproducts =>
+      cartproducts.filter(currentproduct => {
+        return currentproduct.id != id;
+      })
+    )
+  }
+*/
   const removeFromCart = (productName) => {
-    setCartItems((prevCartItems) =>
-      prevCartItems
-        .map((item) =>
-          item.name === productName
-            ? { ...item, quantity: Math.max(item.quantity - 1, 0) } 
-            : item
-        )
-        .filter((item) => item.quantity > 0) 
-    );
+    if (productName) {
+      setCartItems((prevCartItems) =>
+        prevCartItems
+          .map((item) =>
+            item.name === productName
+              ? { ...item, quantity: Math.max(item.quantity - 1, 0) }
+              : item
+          )
+          .filter((item) => item.quantity > 0)
+      );
+    } else {
+      setCartItems([]);
+    }
   };
-  
 
   return (
-    <CartContext.Provider value={{ cartItems, addToCart, removeFromCart }}>
+    <CartContext.Provider value={{ cartItems, addToCart, removeFromCart, }}>
       {children}
     </CartContext.Provider>
   );
