@@ -30,8 +30,8 @@ const Korg = () => {
             <div className="items-btns">
               {item.name}
               <div>
-                <button onClick={() => handleIncrease(item)}>+</button>
-                <button onClick={() => handleDecrease(item)}>-</button>
+                <button className='korgbttn' onClick={() => handleIncrease(item)}>+</button>
+                <button className='korgbttn' onClick={() => handleDecrease(item)}>-</button>
               </div>
             </div>
             <div className="quantity-price">
