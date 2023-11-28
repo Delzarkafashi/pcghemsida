@@ -1,19 +1,89 @@
-.product-image {
-  max-width: 50px;
+.cart-container {
+  display: flex;
+  flex-direction: column;
 }
 
-.korgbttn+ {
-  background-color: #4caf50;
+td {
+  width: 20rem;
+}
+
+.product-image {
+  max-width: 100px;
+}
+
+.korgbttn-plus {
+  background-color: #4c6daf;
   color: white;
   border: none;
   padding: 5px 10px;
   cursor: pointer;
   border-radius: 5px;
+  box-shadow: 2px 4px 8px 0px rgba(0, 0, 0, 0.5);
   margin-left: 5px;
 }
 
-.korgbttn-:hover {
-  background-color: #fd0606;
+.korgbttn-plus:hover {
+  background-color: #5eaf4c;
+}
+
+.korgbttn-minus {
+  background-color: #4c6daf;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 2px 4px 8px 0px rgba(0, 0, 0, 0.5);
+  margin-left: 5px;
+}
+
+.korgbttn-minus:hover {
+  background-color: #af4c4c;
+}
+
+
+.korgbttn-del {
+  border: none;
+  padding: 0.5rem;
+  border-radius: 10px;
+  width: 9rem;
+  line-height: 1.5rem;
+  background-color:  rgb(255, 3, 3);
+  outline: none;
+  font-style: normal;
+  font-size: medium;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.korgbttn-del:hover {
+  border-radius: 5px;
+  box-shadow: 0px 3px 8px 3px rgba(0, 0, 0, 0.6);
+  background-color: rgb(194, 69, 69);
+  transition: ease-in-out;
+  transition-property: all;
+  transition-duration: 0.4s;
+}  
+
+.korgbttn-buy {
+  border: none;
+  padding: 0.5rem;
+  border-radius: 10px;
+  width: 9rem;
+  line-height: 1.5rem;
+  background-color:  rgb(37, 255, 3);
+  outline: none;
+  font-style: normal;
+  font-size: medium;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.korgbttn-buy:hover {
+  border-radius: 5px;
+  box-shadow: 0px 3px 8px 3px rgba(0, 0, 0, 0.6);
+  background-color: rgb(96, 224, 82);
+  transition: ease-in-out;
+  transition-property: all;
+  transition-duration: 0.4s;
 }
 
 .total {
@@ -30,5 +100,11 @@
   justify-content: space-between;
   align-items: center;
   margin-top: 10px;
+}
+
+.del-buy{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
