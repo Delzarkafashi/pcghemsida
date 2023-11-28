@@ -53,9 +53,9 @@ import '../ProductFolder/product.css';
 export const productData = [
   {
     id:1,
-    name: "Cykel",
-    description: "lorem lorem lorem lorem",
-    price: 299,
+    name: 'Vit och Blå Fotboll',
+    description: 'En stilren vit och blå fotboll, lämplig för spel på gräsplaner och konstgräs.',
+    price: 120,
     currency: "$",
     thumb: "./images/1.jpg"
 
@@ -63,99 +63,99 @@ export const productData = [
 
 {
     id:2,
-    name: "Football",
-    description: "lorem lorem lorem lorem",
-    price: 99,
+    name: 'Mini Fotboll',
+    description: 'En liten fotboll perfekt för yngre spelare eller för lek på mindre ytor.',
+    price: 80,
     currency: "$",
     thumb: "./images/2.jpg" 
 },
 
 {
     id:3,
-    name: "fotballskor",
-    description: "lorem lorem lorem lorem",
-    price: 199,
+    name: 'Klassisk Svart och vit Fotboll',
+    description: 'En traditionell svart och vit fotboll, perfekt för spontana matcher och träningssessioner.',
+    price: 150,
     currency: "$",
     thumb: "./images/3.jpg"
 },
 
 {
     id:4,
-    name: "Sportcykel1",
-    description: "lorem lorem lorem lorem",
-    price: 19,
+    name: 'Manchester City Special Edition Fotboll',
+    description: 'En exklusiv fotboll för äkta fans av Manchester City. Designad med klubbens färger och emblem.',
+    price: 250,
     currency: "$",
     thumb: "./images/4.jpg"
 },
 
 {
     id:5,
-    name: "Sportcykel1",
-    description: "lorem lorem lorem lorem",
-    price: 19,
+    name: 'Citybike',
+    description: 'En bekväm citybike för avslappnad stadscykling.',
+    price: 180,
     currency: "$",
     thumb: "./images/5.jpg"
 },
 
 {
     id:6,
-    name: "Sportcykel1",
-    description: "lorem lorem lorem lorem",
-    price: 19,
+    name: 'Mountainbike',
+    description: 'En robust mountainbike för terrängcykling.',
+    price: 200,
     currency: "$",
     thumb: "./images/6.jpg"
 },
 
 {
   id:7,
-  name: "Sportcykel1",
-  description: "lorem lorem lorem lorem",
-  price: 19,
+  name: 'Racersykkel',
+  description: 'En snabb racersykkel för landsvägscykling.',
+  price: 300,
   currency: "$",
   thumb: "./images/7.jpg"
 },
 
 {
   id:8,
-  name: "Sportcykel1",
-  description: "lorem lorem lorem lorem",
-  price: 19,
+  name: 'Downhillcykel',
+  description: 'En kraftfull downhillcykel för extrema nedförsbackar.',
+  price: 350,
   currency: "$",
   thumb: "./images/8.jpg"
 },
 
 {
   id:9,
-  name: "Sportcykel1",
-  description: "lorem lorem lorem lorem",
-  price: 19,
+  name: 'Flexibel BJJ Spats',
+  description: 'Flexibla BJJ spats tillverkade av stretchigt material för ökad rörelsefrihet. Perfekt för träning och grappling.',
+  price: 350,
   currency: "$",
   thumb: "./images/9.jpg"
 },
 
 {
   id:10,
-  name: "Sportcykel1",
-  description: "lorem lorem lorem lorem",
-  price: 19,
+  name: 'Lättviktig BJJ Rashguard',
+  description: 'En lättviktig rashguard designad för Brazilian Jiu-Jitsu. Tillverkad med fukttransporterande material för optimal komfort.',
+  price: 400,
   currency: "$",
   thumb: "./images/10.jpg"
 },
 
 {
   id:11,
-  name: "Sportcykel1",
-  description: "lorem lorem lorem lorem",
-  price: 19,
+  name: 'Andningsbar BJJ T-shirt',
+  description: 'En andningsbar T-shirt för Brazilian Jiu-Jitsu med svalkande material. Passar bra för träning eller som vardagsklädsel.',
+  price: 250,
   currency: "$",
   thumb: "./images/11.jpg"
 },
 
 {
   id:12,
-  name: "Sportcykel1",
-  description: "lorem lorem lorem lorem",
-  price: 19,
+  name: 'Premium BJJ Gi',
+  description: 'Ett premium Brazilian Jiu-Jitsu gi tillverkat av högkvalitativt bomullsmaterial. Idealiskt för träning och tävlingar.',
+  price: 1200,
   currency: "$",
   thumb: "./images/12.jpg"
 },
