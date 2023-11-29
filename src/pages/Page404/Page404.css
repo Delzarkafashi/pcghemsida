@@ -1,0 +1,6 @@
+.construction {
+    width: 115rem;
+}
+.construction:hover {
+    transform: none;
+}

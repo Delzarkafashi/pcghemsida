@@ -29,16 +29,16 @@ const Footer = () => {
           <div className="col">
             <h1>Other</h1>
             <ul className="list-unstyled">
-              <li><a href="#">About us</a></li>
-              <li><a href="#">Refund Policy</a></li>
-              <li><a href="#">Webshop Policy</a></li>
-              <li><a href="#">Terms&Conditions</a></li>
+              <li><a href="/*">About us</a></li>
+              <li><a href="/*">Refund Policy</a></li>
+              <li><a href="/*">Webshop Policy</a></li>
+              <li><a href="/*">Terms&Conditions</a></li>
             </ul>
           </div>
         </div>
         <div className="row">
           <p className="col-sm">
-            © 2021 PERFORMANCE COACH&GEAR. All rights reserved.
+            © 2023 PERFORMANCE COACH&GEAR. All rights reserved.
           </p>
         </div>
       </div>
