@@ -12,15 +12,23 @@ class SM extends React.Component {
       <div className="container">
         <h1>Ni kan nå oss:</h1>
         <div className="container-sm">
-          <a href="https://www.linkedin.com/feed/?trk=guest_homepage-basic_google-one-tap-submit" target="_blank">
+          <a href="https://www.linkedin.com/feed/?trk=guest_homepage-basic_google-one-tap-submit" 
+          target="_blank"
+          title='LinkedIn'
+          >
             <img src={linkedin} alt="linkedin" />
           </a>
 
-          <a href="https://www.facebook.com/din-facebook-profil" target="_blank">
+          <a href="https://www.facebook.com/din-facebook-profil" 
+          target="_blank"
+          title='Facebook'
+          >
             <img src={facebookImage} alt="" />
           </a>
 
-          <a href="https://www.instagram.com/din-instagram-profil" target="_blank">
+          <a href="https://www.instagram.com/din-instagram-profil"
+          target="_blank"
+          title='Instagram'>
             <img src={instagramImage} alt="" />
           </a>
         </div>

@@ -16,6 +16,7 @@ function SearchBar() {
         className="search-input"
         type="text"
         placeholder="Sök..."
+        title="Skriv en produkt"
         value={searchQuery}
         onChange={(e) => setSearchQuery(e.target.value)}
         style={{
@@ -27,6 +28,7 @@ function SearchBar() {
       />
       <button
         onClick={handleSearch}
+        title="Klicka här för att söka"
         style={{
           padding: "8px",
           cursor: "pointer",

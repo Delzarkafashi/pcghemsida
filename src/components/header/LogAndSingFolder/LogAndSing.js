@@ -123,7 +123,7 @@ const App = () => {
             <button 
               className="select-btn" 
               onClick={handleBasket} 
-              title="Cart"
+              title="Korg"
             >
               <ShoppingCartIcon />
             </button>
@@ -138,6 +138,7 @@ const App = () => {
               <div className="user-input">
                 <input
                   type="text"
+                  title="Välj ett användarnamn"
                   placeholder="Användarnamn"
                   value={username}
                   onChange={(e) => {
@@ -151,6 +152,7 @@ const App = () => {
 
                 <input
                   type="password"
+                  title="Välj ett lösenord"
                   placeholder="Lösenord"
                   value={password}
                   onChange={(e) => {
@@ -173,6 +175,7 @@ const App = () => {
               <div className="user-input">
                 <input
                   type="text"
+                  title="Skriv in ditt användarnamn"
                   placeholder="Användarnamn"
                   value={username}
                   onChange={(e) => {
@@ -186,6 +189,7 @@ const App = () => {
 
                 <input
                   type="password"
+                  title="Skriv in ditt lösenord "
                   placeholder="Lösenord"
                   value={password}
                   onChange={(e) => {
@@ -202,9 +206,9 @@ const App = () => {
           )}
 
           <div className="select-container">
-            <button className="select-btn" onClick={() => setShowForm("register")}>{/*Registrera*/}<PersonAddIcon/></button>
-            <button className="select-btn" onClick={() => setShowForm("login")}>{/*Logga in*/}<VpnKeyIcon/></button>
-            <button className="select-btn" onClick={handleBasket}>{/*Korg*/}<ShoppingCartIcon/></button>
+            <button className="select-btn" title="Klicka här för att registrera" onClick={() => setShowForm("register")}>{/*Registrera*/}<PersonAddIcon/></button>
+            <button className="select-btn" title="Klicka här för att logga in" onClick={() => setShowForm("login")}>{/*Logga in*/}<VpnKeyIcon/></button>
+            <button className="select-btn" title="Klicka här för att öppna korgen" onClick={handleBasket}>{/*Korg*/}<ShoppingCartIcon/></button>
           </div>
         </div>
       )}

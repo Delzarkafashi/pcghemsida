@@ -15,8 +15,13 @@ export default function Navbar() {
 
   return (
     <nav className="nav">
-     <Link to="/" id="back-to-top-anchor" onClick={handleTitleClick} 
-     style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+     <Link 
+     to="/" 
+     id="back-to-top-anchor" 
+     onClick={handleTitleClick} 
+     style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+     title='Klicka här för att gå till Hemsida'
+     >
      <img src= {logop} alt="" style={{ maxWidth: '100px', maxHeight: '100px', marginRight: '10px' }} />
      <span style={{ fontSize: '30px' }}>Performance Coach&Gear</span>
      </Link>

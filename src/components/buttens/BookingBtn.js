@@ -12,7 +12,10 @@ const Booking = () => {
   return (
     <div className='book'>
       <p>Klicka på knappen nedan för att boka:</p>
-      <button className='book-btn' onClick={openCalendly}>
+      <button 
+      className='book-btn' 
+      title='Klicka här för att boka datum&tid'
+      onClick={openCalendly}>
         Boka här
       <CalendarMonthIcon/>
       </button>

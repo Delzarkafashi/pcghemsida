@@ -24,20 +24,6 @@ const Footer = () => {
           {/* colomn2 */}
           <div className="col">
           <SM />
-            {/* <h1>Follow Us</h1>
-            <ul className="list-unstyled">
-              <li>facebook</li>
-              <li>instagram</li>
-              <li>twitter</li>
-              <li>youtube</li> */}
-              {/* <li>andress</li>
-              <li>Storgatan 3 , linköping</li>
-              <li>123 33, sweden</li>
-              <li>info@pcg.se</li>
-              <li>telfon </li>
-              <li>070-44444444</li> */}
-              
-            {/* </ul> */}
           </div>
           {/* colomn3 */}
           <div className="col">
@@ -52,7 +38,7 @@ const Footer = () => {
         </div>
         <div className="row">
           <p className="col-sm">
-            © 2021 THICC MEME INC. All rights reserved.
+            © 2021 PERFORMANCE COACH&GEAR. All rights reserved.
           </p>
         </div>
       </div>

@@ -2,6 +2,7 @@ import React from 'react';
 import { useCart } from '../../CartContext';
 import './korg.css';
 
+
 const Korg = () => {
   const { cartItems, addToCart, removeFromCart, deleteFromCart } = useCart();
 
@@ -23,7 +24,7 @@ const Korg = () => {
 
   const handleBuy = () => {
     return (
-      alert("LURAT")
+      alert("Tack för din beställning")
     );
   }
 
@@ -33,12 +34,12 @@ const Korg = () => {
       <table className="item-table">
         <thead>
           <tr>
-            <th>Image</th>
-            <th>Name</th>
-            <th>Description</th>
-            <th>Quantity</th>
-            <th>Actions</th>
-            <th>Price</th>
+            <th>Bild</th>
+            <th>Namn</th>
+            <th>Beskrivning</th>
+            <th>Antal</th>
+            <th>Öka/Minska</th>
+            <th>Pris</th>
           </tr>
         </thead>
         <tbody className='product-body'>
@@ -53,14 +54,20 @@ const Korg = () => {
               <td>{item.description}</td>
               <td>{item.quantity}</td>
               <td>
-                <button className="korgbttn-plus" onClick={() => handleIncrease(item)}>
+                <button 
+                className="korgbttn-plus"
+                title='Klicka här för att öka antal produkter' 
+                onClick={() => handleIncrease(item)}>
                   +
                 </button>
-                <button className="korgbttn-minus" onClick={() => handleDecrease(item)}>
+                <button 
+                className="korgbttn-minus" 
+                title='Klicka här för att minska antal produkter eller ta bort produkten' 
+                onClick={() => handleDecrease(item)}>
                   -
                 </button>
               </td>
-              <td>{item.price}</td>
+              <td>{item.price} :-</td>
             </tr>
           ))}
         </tbody>
@@ -70,11 +77,11 @@ const Korg = () => {
         <div className="total">
           <div className="total-row">Total</div>
           <div className="quantity-total">
-            <div>Total products: {quantifier}</div>
-            <div>Total price: {total} :-</div>
+            <div>Total produkter: {quantifier}</div>
+            <div>Totalt pris: {total} :-</div>
             <div className='del-buy'>
-              <button className='korgbttn-buy' onClick={handleBuy}>Buy</button>
-              <button className='korgbttn-del' onClick={deleteFromCart}>Remove All Items</button>
+              <button className='korgbttn-buy' onClick={handleBuy}>Köp</button>
+              <button className='korgbttn-del' onClick={deleteFromCart}>Rensa korgen</button>
             </div>
           </div>
         </div>

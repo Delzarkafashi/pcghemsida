@@ -22,7 +22,7 @@ export default function Home() {
 
   const textToReadCoaching = `${headerTextCoaching}. ${paragraphTextCoaching}`;
 
-  const headerTextProducts = "Products";
+  const headerTextProducts = "Produkter";
   const paragraphTextProducts = `
     Sportprodukter spelar en central roll i att möjliggöra och förbättra
     idrottsprestationer. Oavsett om det handlar om specialiserad
@@ -40,7 +40,7 @@ export default function Home() {
 
   const textToReadProducts = `${headerTextProducts}. ${paragraphTextProducts}`;
 
-  const headerTextCustomerService = "Customer Service";
+  const headerTextCustomerService = "Kundtjänst";
   const paragraphTextCustomerService = `
     Kundservice är hjärtat i varje företags relation med sina kunder och
     utgör grunden för att skapa en positiv varumärkesupplevelse.
@@ -66,13 +66,21 @@ export default function Home() {
           <h3>{headerTextCoaching}</h3>
           <p>{paragraphTextCoaching}</p>
         </div>
-        <Link to="/coaching" rel="noreferrer" className="home-img">
+        <Link 
+        to="/coaching" 
+        rel="noreferrer" 
+        className="home-img"
+        title="Klicka här för att komma till Coachings Sida">
           <img src={coach} alt="Coaching" width={450} />
         </Link>
       </div>
 
       <div className="home-div2">
-        <Link to="/product" rel="noreferrer">
+        <Link 
+        to="/product" 
+        rel="noreferrer"
+        title="Klicka här för att komma till Produkts Sida"
+        >
           <img src={bike} alt="Bike" width={450} />
         </Link>
         <div >
@@ -88,7 +96,11 @@ export default function Home() {
           <h3>{headerTextCustomerService}</h3>
           <p>{paragraphTextCustomerService}</p>
         </div>
-        <Link to="/customerservice" rel="noreferrer">
+        <Link 
+        to="/customerservice" 
+        rel="noreferrer"
+        title="Klicka här för att komma till Kundtjänsts Sida"
+        >
           <img src={customer} 
           className="home-image" alt="customer-service" width={500} height={320} />
         </Link>

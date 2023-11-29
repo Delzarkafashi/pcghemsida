@@ -54,7 +54,10 @@ export default function Coaching() {
           <p>{paragraphTextBJJ}</p>
           <Booking />
         </div>
-        <a href='https://calendly.com/delzarkafashi/how-can-we-help-you' target='_blank' title='två man som tävlar i BJJ' rel='noopener noreferrer'>
+        <a href='https://calendly.com/delzarkafashi/how-can-we-help-you' 
+        target='_blank' 
+        title='Klicka här för att boka en Bjj-coach' 
+        rel='noopener noreferrer'>
           <img src={bjj} alt='Brazilian Jiu-Jitsu' width={450} height={320} />
         </a>
       </div>
@@ -66,7 +69,10 @@ export default function Coaching() {
           <p>{paragraphTextCykling}</p>
           <Booking />
         </div>
-        <a href='https://calendly.com/delzarkafashi/how-can-we-help-you' target='_blank'  title='en kvinna som cyklar' rel='noopener noreferrer'>
+        <a href='https://calendly.com/delzarkafashi/how-can-we-help-you' 
+        target='_blank'  
+        title='Klicka här för att boka en Cykel-coach' 
+        rel='noopener noreferrer'>
           <img src={cykling} alt='Cykling' width={450} />
         </a>
       </div>
@@ -78,7 +84,10 @@ export default function Coaching() {
           <p>{paragraphTextFotboll}</p>
           <Booking />
         </div>
-        <a href='https://calendly.com/delzarkafashi/how-can-we-help-you' target='_blank'  title='en bild på en fotboll' rel='noopener noreferrer'>
+        <a href='https://calendly.com/delzarkafashi/how-can-we-help-you' 
+        target='_blank'  
+        title='Klicka här för att boka en Fotboll-coach' 
+        rel='noopener noreferrer'>
           <img src={fotboll} alt='fotboll' width={450} />
         </a>
       </div>
