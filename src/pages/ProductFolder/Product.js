@@ -1,51 +1,3 @@
-// src/pages/Product.js
-// import React from 'react';
-// import { useCart } from '../../components/CartContext';
-// import './product.css';
-
-// // Export productData
-// export const productData = [
-//   {
-//     name: 'Produktnamn 1',
-//     price: 19.99,
-//     // other product attributes...
-//   },
-//   {
-//     name: 'Produktnamn 2',
-//     price: 24.99,
-//     // other product attributes...
-//   },
-//   {
-//     name: 'Produktnamn 3',
-//     price: 29.99,
-//     // other product attributes...
-//   },
-// ];
-
-
-// const Product = () => {
-//   const { addToCart } = useCart();
-
-//   const handleBuyClick = (product) => {
-    
-//     addToCart(product);
-//   };
-
-//   return (
-//     <div className='products'>
-//       {productData.map((product, index) => (
-//         <div key={index}>
-//           <h3>{product.name}</h3>
-//           <p>{product.price}</p>
-//           <button onClick={() => handleBuyClick(product)}>Köp</button>
-//         </div>
-//       ))}
-//     </div>
-//   );
-// };
-
-// export default Product;
-
 import React from 'react';
 import { useCart } from '../../components/CartContext';
 import '../ProductFolder/product.css';
@@ -108,8 +60,8 @@ export const productData = [
 
 {
   id:7,
-  name: 'Racersykkel',
-  description: 'En snabb racersykkel för landsvägscykling.',
+  name: 'Racercykel',
+  description: 'En snabb racercykel för landsvägscykling.',
   price: 300,
   currency: "$",
   thumb: "./images/7.jpg"
@@ -144,7 +96,7 @@ export const productData = [
 
 {
   id:11,
-  name: 'Andningsbar BJJ T-shirt',
+  name: 'Andningsbar BJJ Gi',
   description: 'En andningsbar T-shirt för Brazilian Jiu-Jitsu med svalkande material. Passar bra för träning eller som vardagsklädsel.',
   price: 250,
   currency: "$",
@@ -176,9 +128,15 @@ const Product = () => {
             <img src={product.thumb} alt={product.name} />
           </div>
           <h3>{product.name}</h3>
-          <p>${product.price}</p>
+          <p>{product.price} :-</p>
           <p>{product.description}</p>
-          <button className='shop-buttons' onClick={() => handleBuyClick(product)}>Köp</button>
+          <button 
+          className='shop-buttons' 
+          title='Klicka här för att lägga produkten till korgen'
+          onClick={() => handleBuyClick(product)}
+          >
+            Köp
+          </button>
         </div>
       ))}
     </div>

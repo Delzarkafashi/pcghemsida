@@ -40,6 +40,7 @@ function ScrollTop(props) {
       <Box
         onClick={handleClick}
         role="presentation"
+        title="Back to Top"
         sx={{ position: "fixed", bottom: 16, right: 16, zIndex: (theme) => theme.zIndex.drawer + 1}}
       >
         {children}

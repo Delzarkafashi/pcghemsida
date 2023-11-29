@@ -20,24 +20,7 @@ const SpeechButton = ({ textToRead }) => {
   return (
     <button
       className='home-btn'
-      // style={{
-      //   display: 'flex',
-      //   alignItems: 'center',
-      //   gap: '0em',
-      //   height: 'fit-content',
-      //   width: 'fit-content',
-      //   border: '3px solid rgba(0, 0, 0, 0.2)',
-      //   padding: '0.5rem',
-      //   borderRadius: '10px',
-      //   width: 'fit-content',
-      //   lineHeight: '1.5rem',
-      //   backgroundColor: 'rgba(22, 213, 1, 0.659)',
-      //   color: 'black',
-      //   outline: 'none',
-      //   fontStyle: 'normal',
-      //   fontSize: 'larger',
-      //   fontFamily: 'Georgia, Times New Roman, Times, serif',
-      // }}
+      title='Klicka här för att lysna på texten'
       onClick={handleClick}
     >
       {speaking ? <StopIcon fontSize='small' /> : <PlayArrowIcon fontSize='small' />}
