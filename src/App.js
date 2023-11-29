@@ -1,5 +1,6 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
+import  Page404 from "./pages/Page404/Page404";
 import Navbar from './components/header/NavbarFolder/Navbar';
 import Main from './components/main/Main';
 import Coaching from './pages/CoachingFolder/Coaching';
@@ -27,6 +28,7 @@ function App() {
               <Route path="/customerservice" element={<CustomerService />} />
               <Route path="/korg" element={<Korg />} />
               <Route path="/search" element={<SearchResultPage />} />
+              <Route path="/*" element={<Page404/>} />
             </Routes>
           </div>
           <Main />
