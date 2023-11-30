@@ -118,6 +118,7 @@ const Product = () => {
 
   const handleBuyClick = (product) => {
     addToCart({ ...product, quantity: 1, image: product.thumb });
+    alert("Produkten lagts i korgen!")
   };
 
   return (

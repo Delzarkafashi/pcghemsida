@@ -57,7 +57,8 @@ const App = () => {
 
     const existingUsers = JSON.parse(localStorage.getItem("users")) || [];
     const user = existingUsers.find(
-      (user) => user.username === username && user.password === password
+      (user) => user.username === username && user.password === password,
+      navigate("/korg")
     );
 
     if (user) {
